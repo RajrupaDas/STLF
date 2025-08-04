@@ -21,8 +21,8 @@ import pandas as pd
 from pulp import LpProblem, LpVariable, LpMinimize, lpSum, LpBinary, PulpSolverError
 
 # Load forecast data
-df_demand = pd.read_csv("demand_forecast.csv")
-df_generation = pd.read_csv("generation_forecast.csv")
+df_demand = pd.read_csv("data/demand_forecast.csv")
+df_generation = pd.read_csv("data/generation_forecast.csv")
 df = pd.merge(df_demand, df_generation, on="time")
 
 # Define controllable loads
